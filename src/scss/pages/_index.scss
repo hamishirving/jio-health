@@ -1,0 +1,230 @@
+.shift-1 {
+	@include shift(1);
+}
+
+.shift-2 {
+	@include shift(2);
+}
+
+.shift-3 {
+	@include shift(3);
+}
+
+.header {
+	background: $color-white;
+	padding: 70px 0;
+
+	.header-container {
+		@include outer-container;
+		margin-top: 100px;
+
+		.title-section {
+			@include span-columns(6);
+			margin-top: 20px;
+
+			h1 {
+				padding-right: 15%;
+			}
+
+			span {
+				font-weight: 400;
+			}
+
+			img {
+				margin-top: 5px;
+			}
+
+			@include media($mobile) {
+				@include span-columns(4);
+				text-align: center;
+			}
+		}
+	}
+
+	.telephone {
+		margin: 30px 0;
+
+		.intl-tel-input {
+			width: 60%;
+			margin-right: 10px;
+
+			.mobile-number {
+				width: 100%;
+			}
+		}
+
+		button {
+			height: 50px;
+		}
+	}
+
+	.header-animation {
+		@include span-columns(6);
+		text-align: right;
+		padding-right: 5%;
+	}
+}
+
+.signup {
+	text-align: center;
+	background: $color-secondary;
+
+	.signup-container {
+		@include outer-container;
+		padding: 90px 0;
+	
+		h2 {
+			color: $color-white;
+			margin-top: -10px;
+			@include span-columns(10);
+			@include shift(1);
+			padding: 0 40px;
+
+			@include media($mobile) {
+				@include span-columns(4);
+				@include shift(0);				
+			}
+		}
+
+		.signup-form {
+			@include span-columns(10);
+			@include shift(1);
+			margin-top: 36px;
+
+			input {
+				width: 50%;
+				border: none;
+				margin-right: 10px;
+
+				@include media($mobile) {
+					// width: 100%;
+					@include span-columns(4);
+				}					
+			}
+
+			button {
+				height: 50px;
+				border: 1px solid $color-white;
+				background: transparent;
+				width: 20%;
+				transition: background 400ms;
+
+				&:hover {
+					background: rgba(255,255,255,0.1);
+				}
+			}
+
+			@include media($mobile) {
+				@include span-columns(4);
+				@include shift(0);
+			}
+		}
+	}
+}
+
+.overview {
+
+	.overview-container {
+		@include outer-container;
+		padding-top: 90px;
+
+		.overview-row {
+			@include row();
+			padding-bottom: 100px;
+
+			.overview-col {
+				text-align: center;
+				@include span-columns(2);
+			}
+		}
+	}
+
+	.hr {
+		@include span-columns(8);
+		@include shift(2);
+		border-bottom: 1px solid #d0dee8;
+	}
+}
+
+.features {
+
+	.features-container {
+		@include outer-container;
+		padding-top: 40px;
+		padding-bottom: 100px;
+
+		h2 {
+			text-align: center;
+		}
+
+		.features-row {
+			@include row();
+
+			h2 {
+				text-align: left;
+			}
+
+			.features-col-copy {
+				@include span-columns(5);
+				padding-right: 20px;
+			}
+
+			.features-col-img {
+				@include span-columns(5);
+			}
+		}
+
+		.feature-1 {
+			margin-top: 10px;
+
+			.features-col-copy {
+				margin-top: 45px;
+			}
+		}
+
+		.feature-2 {
+
+			.features-col-copy {
+				margin-top: 80px;
+			}
+		}
+
+		.feature-3 {
+
+			.features-col-copy {
+				margin-top: 190px;
+			}
+		}
+
+		.feature-4 {
+
+			.features-col-copy {
+				margin-top: 90px;
+			}
+		}		
+	}
+}
+
+.security {
+	background: $color-darkBlue;
+	text-align: center;
+
+	.security-container {
+		@include outer-container;
+		padding: 120px 0;
+
+		h2, h4 {
+			color: $color-white;
+		}
+
+		.security-col {
+			@include span-columns(4);
+			margin-top: 15px;
+			text-align: left;
+			
+			p {
+				color: #d2d2d2;
+			}
+		}
+	}
+}

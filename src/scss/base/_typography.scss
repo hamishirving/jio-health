@@ -1,0 +1,56 @@
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+}
+
+h1 {
+	font-size: 2.813em;
+	line-height: 1.2;
+	font-weight: 300;
+	color: $color-darkBlue;
+	
+	@include media($mobile) {
+		font-size: 1.625em;
+	}
+}
+
+h2 {
+	font-size: 2.250em;
+	line-height: 1.25;
+	font-weight: 300;
+	color: $color-darkBlue;
+	margin-bottom: -5px;
+
+	@include media($mobile) {
+		font-size: 1.5em;
+	}
+}
+
+h3 {
+	font-size: 1.125em;
+	line-height: 1.5;
+	font-weight: 400;
+	color: $color-darkBlue;
+}
+
+h4 {
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 500;
+	// letter-spacing: 0.0625em;	
+	color: $color-darkBlue;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+p, ul, ol, pre, table, blockquote {
+	font-size: 1em;
+	line-height: 1.5em;
+	color: $color-greyBlue;
+	margin: 5px 0;
+}
+
+a {
+	font-size: 1em;
+	font-weight: 400;
+}

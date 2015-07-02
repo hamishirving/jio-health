@@ -1,0 +1,56 @@
+.navbar {
+	height: 80px;
+	width: 100%;
+	background: rgba(255,255,255,0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	.nav-container {
+		@include outer-container();
+		padding: 10px 0;
+
+		.brand {
+			padding: 10px 0;
+			float: left;
+
+			.logo {
+				float: left;
+				height: 30px;
+				width: 107px;
+			}
+		}
+
+		.nav-links {
+			float: right;
+			margin: 0;
+			height: 50px;
+			padding: 5px 0;
+
+			li {
+				display: inline;
+				margin: 0 0 0 60px;
+			}
+
+			a {
+				color: $color-primary;
+				font-weight: 400;
+				font-size: .938em;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: color 400ms ease;
+
+				&:hover {
+					color: shade($color-primary, 5%);
+				}
+			}
+
+			button {
+				@include media($mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+}

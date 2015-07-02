@@ -1,0 +1,10 @@
+input {
+	border: 1px solid $color-greyBlue;
+	border-radius: 3px;
+	height: 50px;
+	padding: 0 15px;
+
+	&:placeholder {
+		color: $color-greyBlue;
+	}
+}
