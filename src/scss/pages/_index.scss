@@ -17,6 +17,7 @@
 	.header-container {
 		@include outer-container;
 		margin-top: 100px;
+		margin-bottom: 180px;
 
 		.title-section {
 			@include span-columns(6);
@@ -27,11 +28,7 @@
 			}
 
 			span {
-				font-weight: 400;
-			}
-
-			img {
-				margin-top: 5px;
+				font-weight: 300;
 			}
 
 			@include media($mobile) {
@@ -62,6 +59,18 @@
 		@include span-columns(6);
 		text-align: right;
 		padding-right: 5%;
+
+		img {
+			margin-top: 5px;
+			position: absolute;
+		}
+
+		video {
+			position: relative;
+			margin-left: 25px;
+			top: 97px;
+			// width: 275px;
+		}
 	}
 }
 
@@ -126,15 +135,29 @@
 
 	.overview-container {
 		@include outer-container;
-		padding-top: 90px;
+		padding-top: 80px;
 
 		.overview-row {
 			@include row();
-			padding-bottom: 100px;
+			padding-bottom: 80px;
 
 			.overview-col {
 				text-align: center;
 				@include span-columns(2);
+
+				a {
+					text-decoration: none;
+					display: block;
+					border-radius: 3px;
+					font-weight: 300;
+					padding-top: 10px;
+					padding-bottom: 5px;
+					transition: background 400ms ease;
+
+					&:hover {
+						background: #f5f8fa;
+					}
+				}
 			}
 		}
 	}
@@ -166,7 +189,7 @@
 
 			.features-col-copy {
 				@include span-columns(5);
-				padding-right: 20px;
+				padding-right: 15px;
 			}
 
 			.features-col-img {

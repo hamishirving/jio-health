@@ -14,6 +14,7 @@
 
     <!-- Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300' rel='stylesheet' type='text/css'>
 
     <script src="assets/components/modernizr/modernizr.js"></script>
   </head>
@@ -46,6 +47,10 @@
         </div>
         <div class="header-animation">
           <img src="assets/img/iPhone-header@2x.jpg" height="675px" width="325px">
+          <video autoplay loop height="490px" width="276px">
+            <source src="assets/video/jio-app.mp4">
+            <source src="assets/video/jio-app.webm"> 
+          </video>
         </div>
       </div>
     </section>
@@ -64,24 +69,32 @@
       <div class="overview-container">
         <div class="overview-row">
           <div class="overview-col shift-2">
-            <img src="assets/img/icon_track.png" height="80px" width="80px">
-            <h4>Stay on Track</h4>
-            <p>Jio makes tracking your vitals easy. Enter values manually or sync with your devices.</p>
+            <a data-scroll href="#stay-on-track">
+              <img src="assets/img/icon_track.png" height="80px" width="80px">
+              <h4>Stay on Track</h4>
+              <p>Jio makes tracking your vitals easy. Enter values manually or sync with your devices.</p>
+            </a>  
           </div>
           <div class="overview-col">
-            <img src="assets/img/icon_meds.png" height="80px" width="80px">
-            <h4>Never Miss a Dose</h4>
-            <p>Create a medication list, receive timely reminders and track your compliance!</p>
+            <a data-scroll href="#never-miss">
+              <img src="assets/img/icon_meds.png" height="80px" width="80px">
+              <h4>Never Miss a Dose</h4>
+              <p>Create a medication list, receive timely reminders and track your compliance!</p>
+            </a>
           </div>
           <div class="overview-col">
-            <img src="assets/img/icon_halo.png" height="80px" width="80px">
-            <h4>Your Halo</h4>
-            <p> Share your progress with family &amp; friends and invite them to participate.</p>
+            <a data-scroll href="#your-halo">
+              <img src="assets/img/icon_halo.png" height="80px" width="80px">
+              <h4>Your Halo</h4>
+              <p> Share your progress with family &amp; friends and invite them to participate.</p>
+            </a>
           </div>
           <div class="overview-col">
-            <img src="assets/img/icon_docs.png" height="80px" width="80px">
-            <h4>All in One Place</h4>
-            <p>Your insurance card, conditions, allergies, and documents all seamlessly organized.</p>
+            <a data-scroll href="#one-place">
+              <img src="assets/img/icon_docs.png" height="80px" width="80px">
+              <h4>All in One Place</h4>
+              <p>Your insurance card, conditions, allergies, and documents all seamlessly organized.</p>
+            </a>
           </div>
         </div>
         <div class="hr"></div>
@@ -91,7 +104,7 @@
     <section class="features">
       <div class="features-container">
         <h2>Features</h2>
-        <div class="features-row feature-1">
+        <div class="features-row feature-1" id="stay-on-track">
           <div class="features-col-copy shift-1">
             <h2>Stay on Track</h2>
             <p>From weight to heart rate, Jio cares about every aspect of your health.</p>
@@ -106,7 +119,7 @@
             <img src="assets/img/iPhone-track@2x.jpg" height="650px" width="550px">
           </div>
         </div>
-        <div class="features-row feature-2">
+        <div class="features-row feature-2" id="never-miss">
           <div class="features-col-img shift-1">
             <img src="assets/img/iPhone-meds@2x.jpg" height="675px" width="325px">
           </div>          
@@ -121,7 +134,7 @@
             <p>View your compliance in insightful graphs so you can continue to improve your medication adherence.</p>         
           </div>
         </div>
-        <div class="features-row feature-3">
+        <div class="features-row feature-3" id="your-halo">
           <div class="features-col-copy shift-1">
             <h2>Halo &#45; Caregiving Full Circle</h2>
             <p>Whether next door or continents apart, your Halo brings you and your loved ones together on the journey to better health.</p>
@@ -136,7 +149,7 @@
             <img src="assets/img/iPhone-halo@2x.jpg" height="750px" width="500px">
           </div>
         </div>
-        <div class="features-row feature-4">
+        <div class="features-row feature-4" id="one-place">
           <div class="features-col-img shift-1">
             <img src="assets/img/iPhone-profile@2x.jpg" height="600px" width="420px">
           </div>          
@@ -201,6 +214,11 @@
         $("#mobile-number").intlTelInput({
             utilsScript: "assets/js/scripts.min.js"
         });
+    </script>
+
+    <!-- Smooth Scroll -->
+    <script>
+      smoothScroll.init();
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
