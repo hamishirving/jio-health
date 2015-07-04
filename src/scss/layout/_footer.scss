@@ -5,11 +5,20 @@
 		@include outer-container;
 		padding: 90px 0;
 
+		@include media($mobile) {
+			@include pad(60px 10px);	
+		}
+
 		.footer-row {
 			@include row();
 
 			.footer-col {
 				@include span-columns(2);
+
+				@include media($mobile) {
+					@include span-columns(2);
+					text-align: center;
+				}
 			}
 		}
 	}

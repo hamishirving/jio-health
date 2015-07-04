@@ -47,7 +47,7 @@
         </div>
         <div class="header-animation">
           <img src="assets/img/iPhone-header@2x.jpg" height="675px" width="325px">
-          <video autoplay loop height="490px" width="276px">
+          <video autoplay webkit-playsinline loop height="490px" width="276px">
             <source src="assets/video/jio-app.mp4">
             <source src="assets/video/jio-app.webm"> 
           </video>
@@ -57,7 +57,7 @@
 
     <section class="signup">
       <div class="signup-container">
-        <h2>We&#39;re changing the way you manage your health. Signup to be notified of future updates.</h2>
+        <h2 class="shift-1">We&#39;re changing the way you manage your health. Signup to be notified of future updates.</h2>
         <div class="signup-form">
           <input type="email" placeholder="Email address">
           <button>Sign me up</button>
@@ -103,7 +103,7 @@
 
     <section class="features">
       <div class="features-container">
-        <h2>Features</h2>
+        <h2 class="features-title">Features</h2>
         <div class="features-row feature-1" id="stay-on-track">
           <div class="features-col-copy shift-1">
             <h2>Stay on Track</h2>
@@ -116,12 +116,12 @@
             <p>Fitbit, Jawbone, and Apple HealthKit &#45; we&#39;ve got you covered.</p>
           </div>
           <div class="features-col-img">
-            <img src="assets/img/iPhone-track@2x.jpg" height="650px" width="550px">
+            <img class="lazy" data-original="assets/img/iPhone-track@2x.jpg" height="650px" width="550px">
           </div>
         </div>
         <div class="features-row feature-2" id="never-miss">
           <div class="features-col-img shift-1">
-            <img src="assets/img/iPhone-meds@2x.jpg" height="675px" width="325px">
+            <img class="lazy" data-original="assets/img/iPhone-meds@2x.jpg" height="623px" width="300px">
           </div>          
           <div class="features-col-copy">
             <h2>Never Miss a Dose</h2>
@@ -146,12 +146,12 @@
             <p>High blood sugars or skipped medication doses &#45; Halo alerts keep you informed of your loved ones&#39; health status.</p>                        
           </div>
           <div class="features-col-img">
-            <img src="assets/img/iPhone-halo@2x.jpg" height="750px" width="500px">
+            <img class="lazy" data-original="assets/img/iPhone-halo@2x.jpg" height="630px" width="420px">
           </div>
         </div>
         <div class="features-row feature-4" id="one-place">
           <div class="features-col-img shift-1">
-            <img src="assets/img/iPhone-profile@2x.jpg" height="600px" width="420px">
+            <img class="lazy" data-original="assets/img/iPhone-profile@2x.jpg" height="600px" width="420px">
           </div>          
           <div class="features-col-copy">
             <h2>All in One Place</h2>
@@ -192,14 +192,14 @@
           <div class="footer-col shift-1">
             <h4>Support</h4>
             <ul>
-              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li></br>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-col shift-1">
             <h4>About</h4>
             <ul>
-              <li><a href="#">Company</a></li>
+              <li><a href="company.html">Company</a></li>
             </ul>
           </div>
         </div>
@@ -219,6 +219,12 @@
     <!-- Smooth Scroll -->
     <script>
       smoothScroll.init();
+    </script>
+
+    <script>
+      $("img.lazy").lazyload({
+          effect : "fadeIn"
+      });
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

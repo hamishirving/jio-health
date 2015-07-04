@@ -1677,7 +1677,8 @@ h2 {
   margin-bottom: -5px; }
   @media screen and (max-width: 480px)  {
     h2 {
-      font-size: 1.5em; } }
+      font-size: 1.5em;
+      margin-bottom: 20px; } }
 
 h3 {
   font-size: 1.125em;
@@ -1736,11 +1737,16 @@ input {
     max-width: 73.125em;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 0; }
+    padding: 15px 0;
+    height: 80px; }
     .navbar .nav-container::after {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .navbar .nav-container {
+        padding-left: 10px;
+        padding-right: 40px; } }
     .navbar .nav-container .brand {
       padding: 10px 0;
       float: left; }
@@ -1752,10 +1758,16 @@ input {
       float: right;
       margin: 0;
       height: 50px;
-      padding: 5px 0; }
+      padding: 3px 0; }
+      @media screen and (max-width: 480px)  {
+        .navbar .nav-container .nav-links {
+          padding: 13px 0; } }
       .navbar .nav-container .nav-links li {
         display: inline;
         margin: 0 0 0 60px; }
+        @media screen and (max-width: 480px)  {
+          .navbar .nav-container .nav-links li {
+            margin: 0; } }
       .navbar .nav-container .nav-links a {
         color: #5ad3c0;
         font-weight: 400;
@@ -1780,6 +1792,9 @@ input {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .footer .footer-container {
+        padding: 60px 10px; } }
     .footer .footer-container .footer-row {
       display: block; }
       .footer .footer-container .footer-row::after {
@@ -1793,6 +1808,15 @@ input {
         width: 14.70196%; }
         .footer .footer-container .footer-row .footer-col:last-child {
           margin-right: 0; }
+        @media screen and (max-width: 480px)  {
+          .footer .footer-container .footer-row .footer-col {
+            float: left;
+            display: block;
+            margin-right: 16.03631%;
+            width: 100%;
+            text-align: center; }
+            .footer .footer-container .footer-row .footer-col:last-child {
+              margin-right: 0; } }
   .footer img {
     margin-top: 20px; }
   .footer .copyright {
@@ -1829,12 +1853,21 @@ input {
 
 .shift-1 {
   margin-left: 8.5298%; }
+  @media screen and (max-width: 480px)  {
+    .shift-1 {
+      margin-left: 0%; } }
 
 .shift-2 {
   margin-left: 17.05961%; }
+  @media screen and (max-width: 480px)  {
+    .shift-2 {
+      margin-left: 0%; } }
 
 .shift-3 {
   margin-left: 25.58941%; }
+  @media screen and (max-width: 480px)  {
+    .shift-3 {
+      margin-left: 0%; } }
 
 .header {
   background: #ffffff;
@@ -1849,6 +1882,11 @@ input {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .header .header-container {
+        padding: 0 10px;
+        margin-top: 20px;
+        margin-bottom: 0; } }
     .header .header-container .title-section {
       float: left;
       display: block;
@@ -1859,13 +1897,16 @@ input {
         margin-right: 0; }
       .header .header-container .title-section h1 {
         padding-right: 15%; }
+        @media screen and (max-width: 480px)  {
+          .header .header-container .title-section h1 {
+            padding: 0; } }
       .header .header-container .title-section span {
         font-weight: 300; }
       @media screen and (max-width: 480px)  {
         .header .header-container .title-section {
           float: left;
           display: block;
-          margin-right: 7.42297%;
+          margin-right: 16.03631%;
           width: 100%;
           text-align: center; }
           .header .header-container .title-section:last-child {
@@ -1874,27 +1915,55 @@ input {
     margin: 30px 0; }
     .header .telephone .intl-tel-input {
       width: 60%;
-      margin-right: 10px; }
+      margin-right: 10px;
+      vertical-align: middle; }
+      @media screen and (max-width: 480px)  {
+        .header .telephone .intl-tel-input {
+          width: 100%; } }
       .header .telephone .intl-tel-input .mobile-number {
         width: 100%; }
     .header .telephone button {
-      height: 50px; }
+      height: 50px;
+      vertical-align: middle; }
+      @media screen and (max-width: 480px)  {
+        .header .telephone button {
+          width: 100%;
+          margin-top: 10px; } }
   .header .header-animation {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%;
     text-align: right;
-    padding-right: 5%; }
+    padding-right: 7%; }
     .header .header-animation:last-child {
       margin-right: 0; }
+    @media screen and (max-width: 480px)  {
+      .header .header-animation {
+        float: left;
+        display: block;
+        margin-right: 16.03631%;
+        width: 100%;
+        text-align: center;
+        padding-right: 0; }
+        .header .header-animation:last-child {
+          margin-right: 0; } }
     .header .header-animation img {
       margin-top: 5px;
       position: absolute; }
+      @media screen and (max-width: 480px)  {
+        .header .header-animation img {
+          position: relative;
+          height: 582px;
+          width: 280px;
+          margin-top: 20px; } }
     .header .header-animation video {
       position: relative;
       margin-left: 25px;
       top: 97px; }
+      @media screen and (max-width: 480px)  {
+        .header .header-animation video {
+          display: none; } }
 
 .signup {
   text-align: center;
@@ -1908,6 +1977,9 @@ input {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .signup .signup-container {
+        padding: 60px 10px; } }
     .signup .signup-container h2 {
       color: #ffffff;
       margin-top: -10px;
@@ -1923,9 +1995,10 @@ input {
         .signup .signup-container h2 {
           float: left;
           display: block;
-          margin-right: 7.42297%;
+          margin-right: 16.03631%;
           width: 100%;
-          margin-left: 0%; }
+          margin-left: 0%;
+          padding: 0; }
           .signup .signup-container h2:last-child {
             margin-right: 0; } }
     .signup .signup-container .signup-form {
@@ -1937,35 +2010,41 @@ input {
       margin-top: 36px; }
       .signup .signup-container .signup-form:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 480px)  {
+        .signup .signup-container .signup-form {
+          margin-left: 0%;
+          float: left;
+          display: block;
+          margin-right: 16.03631%;
+          width: 100%; }
+          .signup .signup-container .signup-form:last-child {
+            margin-right: 0; } }
       .signup .signup-container .signup-form input {
         width: 50%;
         border: none;
-        margin-right: 10px; }
+        margin-right: 10px;
+        vertical-align: middle; }
         @media screen and (max-width: 480px)  {
           .signup .signup-container .signup-form input {
-            float: left;
-            display: block;
-            margin-right: 7.42297%;
-            width: 100%; }
-            .signup .signup-container .signup-form input:last-child {
-              margin-right: 0; } }
+            width: 100%; } }
       .signup .signup-container .signup-form button {
         height: 50px;
         border: 1px solid #ffffff;
         background: transparent;
         width: 20%;
-        transition: background 400ms; }
+        transition: background 400ms;
+        vertical-align: middle; }
         .signup .signup-container .signup-form button:hover {
           background: rgba(255, 255, 255, 0.1); }
-      @media screen and (max-width: 480px)  {
-        .signup .signup-container .signup-form {
-          float: left;
-          display: block;
-          margin-right: 7.42297%;
-          width: 100%;
-          margin-left: 0%; }
-          .signup .signup-container .signup-form:last-child {
-            margin-right: 0; } }
+        @media screen and (max-width: 480px)  {
+          .signup .signup-container .signup-form button {
+            float: left;
+            display: block;
+            margin-right: 16.03631%;
+            width: 100%;
+            margin-top: 10px; }
+            .signup .signup-container .signup-form button:last-child {
+              margin-right: 0; } }
 
 .overview .overview-container {
   max-width: 73.125em;
@@ -1976,6 +2055,11 @@ input {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 480px)  {
+    .overview .overview-container {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 60px; } }
   .overview .overview-container .overview-row {
     display: block;
     padding-bottom: 80px; }
@@ -1983,6 +2067,9 @@ input {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .overview .overview-container .overview-row {
+        padding-bottom: 40px; } }
     .overview .overview-container .overview-row .overview-col {
       text-align: center;
       float: left;
@@ -2001,6 +2088,15 @@ input {
         transition: background 400ms ease; }
         .overview .overview-container .overview-row .overview-col a:hover {
           background: #f5f8fa; }
+      @media screen and (max-width: 480px)  {
+        .overview .overview-container .overview-row .overview-col {
+          float: left;
+          display: block;
+          margin-right: 16.03631%;
+          width: 100%;
+          margin-bottom: 30px; }
+          .overview .overview-container .overview-row .overview-col:last-child {
+            margin-right: 0; } }
 .overview .hr {
   float: left;
   display: block;
@@ -2010,6 +2106,15 @@ input {
   border-bottom: 1px solid #d0dee8; }
   .overview .hr:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 480px)  {
+    .overview .hr {
+      float: left;
+      display: block;
+      margin-right: 16.03631%;
+      width: 100%;
+      margin-left: 0%; }
+      .overview .hr:last-child {
+        margin-right: 0; } }
 
 .features .features-container {
   max-width: 73.125em;
@@ -2021,8 +2126,15 @@ input {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 480px)  {
+    .features .features-container {
+      padding: 60px 10px;
+      text-align: center; } }
   .features .features-container h2 {
     text-align: center; }
+  @media screen and (max-width: 480px)  {
+    .features .features-container .features-title {
+      display: none; } }
   .features .features-container .features-row {
     display: block; }
     .features .features-container .features-row::after {
@@ -2031,6 +2143,9 @@ input {
       display: table; }
     .features .features-container .features-row h2 {
       text-align: left; }
+      @media screen and (max-width: 480px)  {
+        .features .features-container .features-row h2 {
+          text-align: center; } }
     .features .features-container .features-row .features-col-copy {
       float: left;
       display: block;
@@ -2039,6 +2154,15 @@ input {
       padding-right: 15px; }
       .features .features-container .features-row .features-col-copy:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 480px)  {
+        .features .features-container .features-row .features-col-copy {
+          float: left;
+          display: block;
+          margin-right: 16.03631%;
+          width: 100%;
+          padding-right: 0; }
+          .features .features-container .features-row .features-col-copy:last-child {
+            margin-right: 0; } }
     .features .features-container .features-row .features-col-img {
       float: left;
       display: block;
@@ -2046,16 +2170,45 @@ input {
       width: 40.29137%; }
       .features .features-container .features-row .features-col-img:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 480px)  {
+        .features .features-container .features-row .features-col-img {
+          float: left;
+          display: block;
+          margin-right: 16.03631%;
+          width: 100%;
+          margin-left: 0%; }
+          .features .features-container .features-row .features-col-img:last-child {
+            margin-right: 0; } }
   .features .features-container .feature-1 {
     margin-top: 10px; }
     .features .features-container .feature-1 .features-col-copy {
       margin-top: 45px; }
+    @media screen and (max-width: 480px)  {
+      .features .features-container .feature-1 {
+        text-align: center; }
+        .features .features-container .feature-1 img {
+          width: 300px;
+          height: 355px; } }
   .features .features-container .feature-2 .features-col-copy {
     margin-top: 80px; }
+  @media screen and (max-width: 480px)  {
+    .features .features-container .feature-2 img {
+      width: 300px;
+      height: 623px; } }
   .features .features-container .feature-3 .features-col-copy {
-    margin-top: 190px; }
+    margin-top: 120px; }
+  .features .features-container .feature-3 img {
+    float: right; }
+  @media screen and (max-width: 480px)  {
+    .features .features-container .feature-3 img {
+      width: 300px;
+      height: 450px; } }
   .features .features-container .feature-4 .features-col-copy {
     margin-top: 90px; }
+  @media screen and (max-width: 480px)  {
+    .features .features-container .feature-4 img {
+      width: 300px;
+      height: 429px; } }
 
 .security {
   background: #0b4069;
@@ -2069,6 +2222,9 @@ input {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 480px)  {
+      .security .security-container {
+        padding: 80px 10px; } }
     .security .security-container h2, .security .security-container h4 {
       color: #ffffff; }
     .security .security-container .security-col {
@@ -2082,3 +2238,11 @@ input {
         margin-right: 0; }
       .security .security-container .security-col p {
         color: #d2d2d2; }
+      @media screen and (max-width: 480px)  {
+        .security .security-container .security-col {
+          float: left;
+          display: block;
+          margin-right: 16.03631%;
+          width: 100%; }
+          .security .security-container .security-col:last-child {
+            margin-right: 0; } }
