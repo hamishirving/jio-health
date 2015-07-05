@@ -2,6 +2,7 @@
 @import 'vendor/h5bp';
 @import 'vendor/normalize';
 @import 'vendor/intlTelInput';
+@import 'vendor/animate';
 
 // Bourbon
 @import 'bourbon/bourbon';
@@ -18,9 +19,14 @@
 @import 'components/buttons';
 @import 'components/forms';
 @import 'components/navbar';
+@import 'components/dot-pulse';
+@import 'components/team-popup';
+@import 'components/contact-form';
+@import 'components/newsletter-form';
 
 // Layout
 @import 'layout/footer';
 
 // Pages
 @import 'pages/index';
+@import 'pages/company';

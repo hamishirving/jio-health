@@ -1,0 +1,82 @@
+#usa-popup.team-popup {
+	height: 190px;
+	width: 190px;
+	padding-top: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+	background: $color-white;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px tint($color-black, 40%);
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	animation-duration: 500ms;
+	z-index: 50;
+
+}
+
+#uk-popup.team-popup {
+	height: 190px;
+	width: 190px;
+	padding-top: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+	background: $color-white;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px tint($color-black, 40%);
+	position: absolute;
+	top: 15px;
+	left: 390px;
+	animation-duration: 500ms;
+	z-index: 50;
+}
+
+#vn-popup.team-popup {
+	height: 190px;
+	width: 190px;
+	padding-top: 80px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: left;
+	background: $color-white;
+	border-radius: 3px;
+	box-shadow: 0 2px 2px tint($color-black, 40%);
+	position: absolute;
+	top: 180px;
+	right: 170px;
+	animation-duration: 500ms;
+	z-index: 50;
+}
+
+#usa-popup, #uk-popup, #vn-popup {
+
+	img {
+		height: 85px;
+		width: 190px;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.close {
+		position: absolute;
+		height: 30px;
+		width: 30px;
+		right: 0;
+		top: 0;
+		background: url('../img/close@2x.png');
+		background-size: 50% 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		cursor: pointer;
+	}
+
+	p {
+		margin: 2px 0;
+	}
+}
+

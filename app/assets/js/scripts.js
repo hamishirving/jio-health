@@ -10,6 +10,52 @@
 
   'use strict';
 
+  var animationIn = "animated fadeIn";
+  var animationOut = "animated fadeOut";
+  var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
+
+  $('#usa').on('click', function () {
+  	$('#usa-popup').show();
+  	$('#usa-popup').toggleClass(animationIn).one(animationEnd, function() {
+  		$(this).removeClass(animationIn);
+  	});
+  })
+
+  $('#usa-popup .close').on('click', function () {
+  	$('#usa-popup').toggleClass(animationOut).one(animationEnd, function() {
+  		$(this).removeClass(animationOut);
+  		$(this).hide();
+  	});;
+  })
+
+  $('#uk').on('click', function () {
+    $('#uk-popup').show();
+    $('#uk-popup').toggleClass(animationIn).one(animationEnd, function() {
+      $(this).removeClass(animationIn);
+    });
+  })
+
+  $('#uk-popup .close').on('click', function () {
+    $('#uk-popup').toggleClass(animationOut).one(animationEnd, function() {
+      $(this).removeClass(animationOut);
+      $(this).hide();
+    });;
+  })
+
+  $('#vn').on('click', function () {
+    $('#vn-popup').show();
+    $('#vn-popup').toggleClass(animationIn).one(animationEnd, function() {
+      $(this).removeClass(animationIn);
+    });
+  })
+
+  $('#vn-popup .close').on('click', function () {
+    $('#vn-popup').toggleClass(animationOut).one(animationEnd, function() {
+      $(this).removeClass(animationOut);
+      $(this).hide();
+    });;
+  })
+
   $(function () {
     // FastShell
   });
