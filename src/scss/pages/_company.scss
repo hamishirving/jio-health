@@ -68,14 +68,10 @@
 			position: relative;
 
 		}
-
-		.show {
-			display: block;
-		}
 	}
 }
 
-#usa-popup {
+#usa-popup, #uk-popup, #vn-popup {
 	display: none;
 }
 

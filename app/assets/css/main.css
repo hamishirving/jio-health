@@ -4461,6 +4461,31 @@ a {
   font-size: 1em;
   font-weight: 400; }
 
+.animated {
+  animated-duration: 3s; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(10%, 0, 0);
+            transform: translate3d(10%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+            transform: translate3d(-10%, 0, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
 button, .button {
   border: none;
   border-radius: 3px;
@@ -4560,7 +4585,7 @@ input {
   #usa .pulse {
     width: 20px;
     height: 20px;
-    box-shadow: 0 1px 1px #707070;
+    box-shadow: 0 1px 1px #474747;
     border: 5px solid #5ad3c0;
     border-radius: 40px;
     background-color: #5ad3c0;
@@ -4603,7 +4628,7 @@ input {
   #uk .pulse {
     width: 20px;
     height: 20px;
-    box-shadow: 0 1px 1px #707070;
+    box-shadow: 0 1px 1px #474747;
     border: 5px solid #5ad3c0;
     border-radius: 40px;
     background-color: #5ad3c0;
@@ -4646,7 +4671,7 @@ input {
   #vn .pulse {
     width: 20px;
     height: 20px;
-    box-shadow: 0 1px 1px #707070;
+    box-shadow: 0 1px 1px #474747;
     border: 5px solid #5ad3c0;
     border-radius: 40px;
     background-color: #5ad3c0;
@@ -5417,10 +5442,8 @@ input {
       height: 556px;
       width: 1170px;
       position: relative; }
-    .team .team-container .show {
-      display: block; }
 
-#usa-popup {
+#usa-popup, #uk-popup, #vn-popup {
   display: none; }
 
 .contact .contact-container {
