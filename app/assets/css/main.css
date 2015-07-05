@@ -1654,6 +1654,150 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+.push-1 {
+  margin-left: 8.5298%; }
+  @media screen and (max-width: 480px)  {
+    .push-1 {
+      margin-left: 0%; } }
+
+.push-2 {
+  margin-left: 17.05961%; }
+  @media screen and (max-width: 480px)  {
+    .push-2 {
+      margin-left: 0%; } }
+
+.push-3 {
+  margin-left: 25.58941%; }
+  @media screen and (max-width: 480px)  {
+    .push-3 {
+      margin-left: 0%; } }
+
+.push-4 {
+  margin-left: 34.11922%; }
+  @media screen and (max-width: 480px)  {
+    .push-4 {
+      margin-left: 0%; } }
+
+.push-5 {
+  margin-left: 42.64902%; }
+  @media screen and (max-width: 480px)  {
+    .push-5 {
+      margin-left: 0%; } }
+
+.push-6 {
+  margin-left: 51.17883%; }
+  @media screen and (max-width: 480px)  {
+    .push-6 {
+      margin-left: 0%; } }
+
+.push-7 {
+  margin-left: 59.70863%; }
+  @media screen and (max-width: 480px)  {
+    .push-7 {
+      margin-left: 0%; } }
+
+.push-8 {
+  margin-left: 68.23843%; }
+  @media screen and (max-width: 480px)  {
+    .push-8 {
+      margin-left: 0%; } }
+
+.push-9 {
+  margin-left: 76.76824%; }
+  @media screen and (max-width: 480px)  {
+    .push-9 {
+      margin-left: 0%; } }
+
+.push-10 {
+  margin-left: 85.29804%; }
+  @media screen and (max-width: 480px)  {
+    .push-10 {
+      margin-left: 0%; } }
+
+.push-11 {
+  margin-left: 93.82785%; }
+  @media screen and (max-width: 480px)  {
+    .push-11 {
+      margin-left: 0%; } }
+
+.push-12 {
+  margin-left: 102.35765%; }
+  @media screen and (max-width: 480px)  {
+    .push-12 {
+      margin-left: 0%; } }
+
+.pull-1 {
+  margin-left: -8.5298%; }
+  @media screen and (max-width: 480px)  {
+    .pull-1 {
+      margin-left: 0%; } }
+
+.pull-2 {
+  margin-left: -17.05961%; }
+  @media screen and (max-width: 480px)  {
+    .pull-2 {
+      margin-left: 0%; } }
+
+.pull-3 {
+  margin-left: -25.58941%; }
+  @media screen and (max-width: 480px)  {
+    .pull-3 {
+      margin-left: 0%; } }
+
+.pull-4 {
+  margin-left: -34.11922%; }
+  @media screen and (max-width: 480px)  {
+    .pull-4 {
+      margin-left: 0%; } }
+
+.pull-5 {
+  margin-left: -42.64902%; }
+  @media screen and (max-width: 480px)  {
+    .pull-5 {
+      margin-left: 0%; } }
+
+.pull-6 {
+  margin-left: -51.17883%; }
+  @media screen and (max-width: 480px)  {
+    .pull-6 {
+      margin-left: 0%; } }
+
+.pull-7 {
+  margin-left: -59.70863%; }
+  @media screen and (max-width: 480px)  {
+    .pull-7 {
+      margin-left: 0%; } }
+
+.pull-8 {
+  margin-left: -68.23843%; }
+  @media screen and (max-width: 480px)  {
+    .pull-8 {
+      margin-left: 0%; } }
+
+.pull-9 {
+  margin-left: -76.76824%; }
+  @media screen and (max-width: 480px)  {
+    .pull-9 {
+      margin-left: 0%; } }
+
+.pull-10 {
+  margin-left: -85.29804%; }
+  @media screen and (max-width: 480px)  {
+    .pull-10 {
+      margin-left: 0%; } }
+
+.pull-11 {
+  margin-left: -93.82785%; }
+  @media screen and (max-width: 480px)  {
+    .pull-11 {
+      margin-left: 0%; } }
+
+.pull-12 {
+  margin-left: -102.35765%; }
+  @media screen and (max-width: 480px)  {
+    .pull-12 {
+      margin-left: 0%; } }
+
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300; }
@@ -1850,24 +1994,6 @@ input {
         font-weight: 200; }
         .footer ul li a:hover {
           color: #50606d; }
-
-.shift-1 {
-  margin-left: 8.5298%; }
-  @media screen and (max-width: 480px)  {
-    .shift-1 {
-      margin-left: 0%; } }
-
-.shift-2 {
-  margin-left: 17.05961%; }
-  @media screen and (max-width: 480px)  {
-    .shift-2 {
-      margin-left: 0%; } }
-
-.shift-3 {
-  margin-left: 25.58941%; }
-  @media screen and (max-width: 480px)  {
-    .shift-3 {
-      margin-left: 0%; } }
 
 .header {
   background: #ffffff;
@@ -2128,7 +2254,10 @@ input {
     display: table; }
   @media screen and (max-width: 480px)  {
     .features .features-container {
-      padding: 60px 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 20px;
+      padding-bottom: 60px;
       text-align: center; } }
   .features .features-container h2 {
     text-align: center; }
@@ -2175,8 +2304,7 @@ input {
           float: left;
           display: block;
           margin-right: 16.03631%;
-          width: 100%;
-          margin-left: 0%; }
+          width: 100%; }
           .features .features-container .features-row .features-col-img:last-child {
             margin-right: 0; } }
   .features .features-container .feature-1 {
@@ -2185,30 +2313,44 @@ input {
       margin-top: 45px; }
     @media screen and (max-width: 480px)  {
       .features .features-container .feature-1 {
+        margin-top: 0;
         text-align: center; }
         .features .features-container .feature-1 img {
           width: 300px;
-          height: 355px; } }
+          height: 355px;
+          margin-top: 40px; } }
   .features .features-container .feature-2 .features-col-copy {
     margin-top: 80px; }
+    @media screen and (max-width: 480px)  {
+      .features .features-container .feature-2 .features-col-copy {
+        margin-top: 60px; } }
   @media screen and (max-width: 480px)  {
     .features .features-container .feature-2 img {
-      width: 300px;
-      height: 623px; } }
+      width: 200px;
+      height: 415px;
+      margin-top: 40px; } }
   .features .features-container .feature-3 .features-col-copy {
-    margin-top: 120px; }
+    margin-top: 100px; }
+    @media screen and (max-width: 480px)  {
+      .features .features-container .feature-3 .features-col-copy {
+        margin-top: 60px; } }
   .features .features-container .feature-3 img {
     float: right; }
   @media screen and (max-width: 480px)  {
     .features .features-container .feature-3 img {
       width: 300px;
-      height: 450px; } }
+      height: 450px;
+      margin-top: 40px; } }
   .features .features-container .feature-4 .features-col-copy {
     margin-top: 90px; }
+    @media screen and (max-width: 480px)  {
+      .features .features-container .feature-4 .features-col-copy {
+        margin-top: 60px; } }
   @media screen and (max-width: 480px)  {
     .features .features-container .feature-4 img {
       width: 300px;
-      height: 429px; } }
+      height: 429px;
+      margin-top: 40px; } }
 
 .security {
   background: #0b4069;
