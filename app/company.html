@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
-    <!-- <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet"> -->
     <link href="assets/css/main.min.css" rel="stylesheet">
 
     <!-- Fonts -->
@@ -21,7 +22,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-transparent">
+    <nav class="navbar navbar-transparent">
       <div class="nav-container">
         <div class="brand">
           <a class="logo "href="/">
@@ -30,14 +31,28 @@
         </div>
         <ul class="nav-links">
           <li><a href="company">Company</a></li>
-          <li><button>Get Download Link</button></li>
+          <li><button id="get-sms">Get Download Link</button></li>
         </ul>
       </div>
-    </div>
+    </nav>
+
+    <nav class="navbar navbar-fixed navbar-company" role="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a class="logo "href="/">
+              <img src="assets/img/icon_logo.png" height="30px" width="107px">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="company.html">Company</a></li>
+          <li><button id="get-sms-2">Get Download Link</button></li>
+        </ul>
+      </div>
+    </nav>
 
     <section class="company-header">
       <div class="company-header-container">
-        <h1>Life empowered</h1>
+        <h1 id="scrollToggle">Life Empowered</h1>
       </div>
     </section>
 
@@ -160,6 +175,19 @@
               <li><a href="company.html">Company</a></li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="modal animated">
+      <div class="modal-container">
+        <div class="modal-bg">
+          <h2>Enter mobile number</h2>
+          <div class="telephone">
+            <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
+            <button>Get Download Link</button>
+          </div>
+          <div class="close-modal"></div>
         </div>
       </div>
     </section>

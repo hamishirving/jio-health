@@ -6,9 +6,17 @@
 		@include outer-container;
 		margin-top: 100px;
 		margin-bottom: 180px;
+		padding: 0 2%;
+
+
+		@include media($tablet) {
+			@include pad(0 5%);			
+			margin-top: 20px;
+			margin-bottom: 140px;
+		}
 
 		@include media($mobile) {
-			@include pad(0 10px);			
+			@include pad(0 5%);			
 			margin-top: 20px;
 			margin-bottom: 0;
 		}
@@ -20,7 +28,7 @@
 			h1 {
 				padding-right: 15%;
 
-				@include media($mobile) {
+				@include media($tablet) {
 					padding: 0;
 				}
 			}
@@ -29,22 +37,23 @@
 				font-weight: 300;
 			}
 
-			@include media($mobile) {
-				@include span-columns(2);
+			@include media($tablet) {
+				@include span-columns(4);
 				text-align: center;
 			}
 		}
 	}
 
 	.telephone {
-		margin: 30px 0;
+		margin-bottom: 20px;
 
 		.intl-tel-input {
 			width: 60%;
 			margin-right: 10px;
+			margin-top: 15px;
 			vertical-align: middle;			
 
-			@include media($mobile) {
+			@include media($sixhundred) {
 				width: 100%;
 			}
 
@@ -55,11 +64,11 @@
 
 		button {
 			height: 50px;
+			margin-top: 15px;
 			vertical-align: middle;
 
-			@include media($mobile) {
+			@include media($sixhundred) {
 				width: 100%;
-				margin-top: 10px;
 			}
 		}
 	}
@@ -69,8 +78,8 @@
 		text-align: right;
 		padding-right: 7%;
 
-		@include media($mobile) {
-			@include span-columns(2);
+		@include media($tablet) {
+			@include span-columns(4);
 			text-align: center;
 			padding-right: 0;
 		}
@@ -79,7 +88,7 @@
 			margin-top: 5px;
 			position: absolute;
 
-			@include media($mobile) {
+			@include media($mobile) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 				position: relative;
 				height: 582px;
 				width: 280px;
@@ -107,8 +116,8 @@
 		@include outer-container;
 		padding: 90px 0;
 
-		@include media($mobile) {
-			@include pad(60px 10px);			
+		@include media($tablet) {
+			@include pad(60px 5%);			
 		}
 	
 		h2 {
@@ -118,8 +127,8 @@
 			@include shift(1);
 			padding: 0 40px;
 
-			@include media($mobile) {
-				@include span-columns(2);
+			@include media($tablet) {
+				@include span-columns(4);
 				@include shift(0);
 				padding: 0;				
 			}
@@ -173,9 +182,9 @@
 		@include outer-container;
 		padding-top: 80px;
 
-		@include media($mobile) {
-			padding-left: 10px;
-			padding-right: 10px;
+		@include media($tablet) {
+			padding-left: 10%;
+			padding-right: 10%;
 			padding-top: 60px;	
 		}
 
@@ -183,13 +192,28 @@
 			@include row();
 			padding-bottom: 80px;
 
-			@include media($mobile) {
+			@include media($tablet) {
+				// @include row();
 				padding-bottom: 40px;
+			}
+
+			.omega {
+				@include omega;
 			}
 
 			.overview-col {
 				text-align: center;
 				@include span-columns(2);
+
+				@include media($tablet) {
+					@include span-columns(4);
+					margin-bottom: 30px;
+				}
+
+				@include media($mobile) {
+					@include span-columns(2);
+					margin-bottom: 30px;
+				}
 
 				a {
 					text-decoration: none;
@@ -204,11 +228,6 @@
 						background: #f5f8fa;
 					}
 				}
-
-				@include media($mobile) {
-					@include span-columns(2);
-					margin-bottom: 30px;
-				}
 			}
 		}
 	}
@@ -218,8 +237,8 @@
 		@include shift(2);
 		border-bottom: 1px solid #d0dee8;
 
-		@include media($mobile) {
-			@include span-columns(2);
+		@include media($tablet) {
+			@include span-columns(4);
 			@include shift(0);
 		}
 	}
@@ -232,9 +251,9 @@
 		padding-top: 40px;
 		padding-bottom: 100px;
 
-		@include media($mobile) {
-			padding-left: 10px;
-			padding-right: 10px;
+		@include media($tablet) {
+			padding-left: 5%;
+			padding-right: 5%;
 			padding-top: 20px;
 			padding-bottom: 60px;
 			text-align: center;
@@ -246,7 +265,7 @@
 
 		.features-title {
 
-			@include media($mobile) {
+			@include media($tablet) {
 				display: none;
 			}
 		}
@@ -257,7 +276,7 @@
 			h2 {
 				text-align: left;
 
-				@include media($mobile) {
+				@include media($tablet) {
 					text-align: center;
 				}
 			}
@@ -266,8 +285,8 @@
 				@include span-columns(5);
 				padding-right: 15px;
 
-				@include media($mobile) {
-					@include span-columns(2);
+				@include media($tablet) {
+					@include span-columns(4);
 					padding-right: 0;
 				}
 			}
@@ -275,8 +294,8 @@
 			.features-col-img {
 				@include span-columns(5);
 
-				@include media($mobile) {
-					@include span-columns(2);
+				@include media($tablet) {
+					@include span-columns(4);
 				}
 			}
 		}
@@ -285,10 +304,22 @@
 			margin-top: 10px;
 
 			.features-col-copy {
-				margin-top: 45px;
+				margin-top: 30px;
+
+				@include media($tablet) {
+					padding: 0 10%;
+				}
 			}
 
-			@include media($mobile) {
+			.features-col-img {
+				@include span-columns(6);
+
+				@include media($tablet) {
+					@include span-columns(4);
+				}
+			}
+
+			@include media($tablet) {
 				margin-top: 0;
 				text-align: center;
 
@@ -305,12 +336,13 @@
 			.features-col-copy {
 				margin-top: 80px;
 
-				@include media($mobile) {
-					margin-top: 60px;
+				@include media($tablet) {
+					padding: 0 10%;
+					margin-top: 30px;
 				}
 			}
 
-			@include media($mobile) {
+			@include media($tablet) {
 
 				img {
 					width: 200px;
@@ -325,21 +357,24 @@
 			.features-col-copy {
 				margin-top: 100px;
 
-				@include media($mobile) {
+				@include media($tablet) {
+					padding: 0 10%;
 					margin-top: 60px;
 				}
 			}
 
-			img {
-				float: right;
-			}
-
-			@include media($mobile) {
+			.features-col-img {
 
 				img {
-					width: 300px;
-					height: 450px;
-					margin-top: 40px;
+					float: right;
+
+					@include media($tablet) {
+						@include span-columns(4);
+						width: 300px;
+						height: 450px;
+						margin-top: 40px;
+						clear: right;
+					}
 				}
 			}
 		}
@@ -349,12 +384,13 @@
 			.features-col-copy {
 				margin-top: 90px;
 
-				@include media($mobile) {
+				@include media($tablet) {
+					padding: 0 10%;
 					margin-top: 60px;
 				}
 			}
 
-			@include media($mobile) {
+			@include media($tablet) {
 
 				img {
 					width: 300px;
@@ -372,10 +408,10 @@
 
 	.security-container {
 		@include outer-container;
-		padding: 120px 0;
+		padding: 100px 0;
 
-		@include media($mobile) {
-			@include pad(80px 10px);	
+		@include media($tablet) {
+			@include pad(80px 5%);	
 		}
 
 		h2, h4 {
@@ -386,13 +422,72 @@
 			@include span-columns(4);
 			margin-top: 15px;
 			text-align: left;
+			padding-right: 5%;
 			
 			p {
 				color: #d2d2d2;
 			}
 
-			@include media($mobile) {
-				@include span-columns(2);
+			@include media($tablet) {
+				@include span-columns(4);
+				padding: 0 10%;
+			}
+		}
+	}
+}
+
+.modal {
+	background: rgba(11, 64, 105, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	display: none;
+
+	.modal-container {
+		@include outer-container;
+		text-align: center;
+		padding: 10% 0;
+
+		.modal-bg {
+			@include span-columns(8);
+			@include shift(2);
+			background: $color-white;
+			padding-left: 10%;
+			padding-right: 10%;
+			padding-top: 40px;
+			padding-bottom: 60px;
+			border-radius: 3px;
+			position: relative;
+
+			.close-modal {
+				position: absolute;
+				height: 80px;
+				width: 80px;
+				right: 0;
+				top: 0;
+				background: url('../img/close-black@2x.png');
+				background-size: 20% 20%;
+				background-position: center center;
+				background-repeat: no-repeat;
+				cursor: pointer;
+			}
+		}
+
+		.telephone {
+			width: 100%;
+
+			input {
+				width: 100%;
+				margin-top: 40px;
+			}
+
+			button {
+				width: 100%;
+				height: 50px;
+				margin-top: 20px;
 			}
 		}
 	}

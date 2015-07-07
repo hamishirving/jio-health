@@ -15,8 +15,8 @@
 			.footer-col {
 				@include span-columns(2);
 
-				@include media($mobile) {
-					@include span-columns(2);
+				@include media($tablet) {
+					@include span-columns(4);
 					text-align: center;
 				}
 			}

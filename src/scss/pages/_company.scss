@@ -1,7 +1,9 @@
 .company-header {
 	background: url('../img/company-bg@2x.jpg');
 	background-size: cover;
+	background-position: center center;
 	height: 500px;
+	margin-top: -80px;
 
 	.company-header-container {
 		@include outer-container;
@@ -23,16 +25,29 @@
 		padding: 80px 0;
 		text-align: center;
 
+		@include media($tablet) {
+			padding: 60px 5%;
+		}
+
 		h2 {
 			@include span-columns(10);
 			font-size: 45px;
 			font-weight: 200;
+
+			@include media($tablet) {
+				@include span-columns(4);
+				margin-bottom: 20px;
+			}
 		}
 
 		h3 {
 			@include span-columns(10);
 			font-size: 31px;
 			font-weight: 200;
+			
+			@include media($tablet) {
+				@include span-columns(4);
+			}
 		}
 
 		h4 {
@@ -42,6 +57,13 @@
 			font-weight: 200;
 			margin-top: 60px;
 			margin-bottom: 30px;
+			padding: 0 2%;
+
+			@include media($tablet) {
+				@include span-columns(4);
+				padding: 0;
+				margin: 15px 0;
+			}
 		}
 	}
 }
@@ -62,11 +84,11 @@
 		.map {
 			margin-top: 80px;
 			background: url('../img/map@2x.png');
-			background-size: cover;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
 			height: 556px;
-			width: 1170px;
 			position: relative;
-
 		}
 	}
 }
@@ -81,6 +103,10 @@
 		@include outer-container;
 		padding: 100px 0;
 		text-align: center;
+
+		@include media($tablet) {
+			padding: 100px 5%;			
+		}
 
 		h2 {
 			margin-bottom: 30px;

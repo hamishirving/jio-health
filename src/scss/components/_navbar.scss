@@ -1,11 +1,12 @@
 .navbar {
 	height: 80px;
 	width: 100%;
-	background: rgba(255,255,255,0.8);
-	position: fixed;
+	background: rgba(255,255,255,0.9);
+	// position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
+	padding: 0 2%;
 	// border-bottom: 1px solid black;
 
 	.nav-container {
@@ -13,7 +14,7 @@
 		padding: 15px 0;
 		height: 80px;
 
-		@include media($mobile) {
+		@include media($tablet) {
 			padding-left: 10px;
 			padding-right: 40px;
 		}
@@ -35,7 +36,7 @@
 			height: 50px;
 			padding: 3px 0;
 
-			@include media($mobile) {
+			@include media($tablet) {
 				padding: 13px 0;
 			}
 
@@ -43,7 +44,7 @@
 				display: inline;
 				margin: 0 0 0 60px;
 
-				@include media($mobile) {
+				@include media($tablet) {
 					margin: 0;
 				}
 			}
@@ -62,7 +63,7 @@
 			}
 
 			button {
-				@include media($mobile) {
+				@include media($tablet) {
 					display: none;
 				}
 			}
@@ -70,6 +71,18 @@
 	}
 }
 
+.navbar-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-top: -80px;
+	transition: all 200ms ease;
+}
+
 .navbar-transparent {
-	background: none;
+	background: transparent;
+}
+
+.navbar-company {
+	background: rgba(11, 64, 105, 0.8);
 }

@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link href="//www.google-analytics.com" rel="dns-prefetch">
     <link href="//ajax.googleapis.com" rel="dns-prefetch">
     <link href="assets/css/main.min.css" rel="stylesheet">
@@ -20,7 +22,7 @@
   </head>
   <body>
 
-    <div class="navbar">
+    <nav class="navbar" role="navigation">
       <div class="nav-container">
         <div class="brand">
           <a class="logo "href="/">
@@ -29,21 +31,35 @@
         </div>
         <ul class="nav-links">
           <li><a href="company.html">Company</a></li>
-          <li><button>Get Download Link</button></li>
+          <li><button id="get-sms">Get Download Link</button></li>
         </ul>
       </div>
-    </div>
+    </nav>
+
+    <nav class="navbar navbar-fixed" role="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a class="logo "href="/">
+              <img src="assets/img/icon_logo.png" height="30px" width="107px">
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="company.html">Company</a></li>
+          <li><button id="get-sms-2">Get Download Link</button></li>
+        </ul>
+      </div>
+    </nav>
 
     <section class="header">
       <div class="header-container">
-        <div class="title-section">
+        <div id="scrollToggle" class="title-section">
           <h1><span>Jio Health</span>
           </br>The easiest way to care for yourself and the ones you love.</h1>
           <div class="telephone">
             <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
             <button>Get Download Link</button>
           </div>
-          <a href="/"><img src="assets/img/icon_app-store.png" height="44px" width="151px"></a>
+          <a href="https://itunes.apple.com/us/app/jio-health/id933157797?mt=8"><img src="assets/img/icon_app-store.png" height="44px" width="151px"></a>
         </div>
         <div class="header-animation">
           <img src="assets/img/iPhone-header@2x.jpg" height="675px" width="325px">
@@ -88,28 +104,28 @@
     <section class="overview">
       <div class="overview-container">
         <div class="overview-row">
-          <div class="overview-col push-2">
+          <div class="omega overview-col push-2">
             <a data-scroll href="#stay-on-track">
               <img src="assets/img/icon_track.png" height="80px" width="80px">
               <h4>Stay on Track</h4>
               <p>Jio makes tracking your vitals easy. Enter values manually or sync with your devices.</p>
             </a>  
           </div>
-          <div class="overview-col">
+          <div class="omega overview-col">
             <a data-scroll href="#never-miss">
               <img src="assets/img/icon_meds.png" height="80px" width="80px">
               <h4>Never Miss a Dose</h4>
               <p>Create a medication list, receive timely reminders and track your compliance!</p>
             </a>
           </div>
-          <div class="overview-col">
+          <div class="omega overview-col">
             <a data-scroll href="#your-halo">
               <img src="assets/img/icon_halo.png" height="80px" width="80px">
               <h4>Your Halo</h4>
               <p> Share your progress with family &amp; friends and invite them to participate.</p>
             </a>
           </div>
-          <div class="overview-col">
+          <div class="omega overview-col">
             <a data-scroll href="#one-place">
               <img src="assets/img/icon_docs.png" height="80px" width="80px">
               <h4>All in One Place</h4>
@@ -136,7 +152,7 @@
             <p>Fitbit, Jawbone, and Apple HealthKit &#45; we&#39;ve got you covered.</p>
           </div>
           <div class="features-col-img">
-            <img src="assets/img/blank.gif" class="lazy animated fadeInRight" data-original="assets/img/iPhone-track@2x.jpg" height="650px" width="550px">
+            <img src="assets/img/blank.gif" class="lazy animated fadeInRight" data-original="assets/img/iPhone-track@2x.jpg" width="100%">
           </div>
         </div>
         <div class="features-row feature-2" id="never-miss">        
@@ -226,6 +242,19 @@
       </div>
     </section>
 
+    <section class="modal animated">
+      <div class="modal-container">
+        <div class="modal-bg">
+          <h2>Enter mobile number</h2>
+          <div class="telephone">
+            <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
+            <button>Get Download Link</button>
+          </div>
+          <div class="close-modal"></div>
+        </div>
+      </div>
+    </section>
+
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
 
@@ -241,6 +270,7 @@
       smoothScroll.init();
     </script>
 
+    <!-- Lazy Load -->
     <script>
       $("img.lazy").lazyload({
           effect : "fadeIn",
