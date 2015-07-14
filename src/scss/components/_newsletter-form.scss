@@ -70,7 +70,7 @@
 		text-align: left;
 		font-weight: 300;
 
-		@include media($mobile) {
+		@include media($tablet) {
 			position: relative;
 			text-align: center;
 			top: 0;

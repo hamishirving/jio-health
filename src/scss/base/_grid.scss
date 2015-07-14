@@ -6,7 +6,11 @@ $max-width: em(1170);
 
 $mobile: new-breakpoint(max-width 480px 2);
 $tablet: new-breakpoint(max-width 768px 4);
+
+$onethousand: new-breakpoint(max-width 1024px 12);
 $sixhundred: new-breakpoint(max-width 610px 4);
+
+$threetwenty: new-breakpoint(max-width 320px 2);
 
 // Push and pull
 

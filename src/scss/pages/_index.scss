@@ -2,16 +2,22 @@
 	background: $color-white;
 	padding: 70px 0;
 
+	@include media($tablet) {
+		padding: 20px 0;
+	}
+
+	@include media($mobile) {
+		padding: 0;
+	}
+
 	.header-container {
 		@include outer-container;
-		margin-top: 100px;
 		margin-bottom: 180px;
 		padding: 0 2%;
 
 
 		@include media($tablet) {
 			@include pad(0 5%);			
-			margin-top: 20px;
 			margin-bottom: 140px;
 		}
 
@@ -22,8 +28,8 @@
 		}
 
 		.title-section {
-			@include span-columns(6);
-			margin-top: 20px;
+			@include span-columns(7);
+			margin-top: 60px;
 
 			h1 {
 				padding-right: 15%;
@@ -48,7 +54,7 @@
 		margin-bottom: 20px;
 
 		.intl-tel-input {
-			width: 60%;
+			width: 59%;
 			margin-right: 10px;
 			margin-top: 15px;
 			vertical-align: middle;			
@@ -74,7 +80,7 @@
 	}
 
 	.header-animation {
-		@include span-columns(6);
+		@include span-columns(5);
 		text-align: right;
 		padding-right: 7%;
 
@@ -183,8 +189,8 @@
 		padding-top: 80px;
 
 		@include media($tablet) {
-			padding-left: 10%;
-			padding-right: 10%;
+			padding-left: 5%;
+			padding-right: 5%;
 			padding-top: 60px;	
 		}
 
@@ -197,16 +203,14 @@
 				padding-bottom: 40px;
 			}
 
-			.omega {
-				@include omega;
-			}
-
 			.overview-col {
 				text-align: center;
 				@include span-columns(2);
 
 				@include media($tablet) {
-					@include span-columns(4);
+					@include span-columns(2);
+					@include omega;
+					@include shift(0);
 					margin-bottom: 30px;
 				}
 
@@ -251,12 +255,22 @@
 		padding-top: 40px;
 		padding-bottom: 100px;
 
-		@include media($tablet) {
-			padding-left: 5%;
-			padding-right: 5%;
+		@include media($onethousand) {
+			padding-left: 15%;
+			padding-right: 15%;
 			padding-top: 20px;
 			padding-bottom: 60px;
-			text-align: center;
+			text-align: center;		
+		}
+		
+		@include media($tablet) {
+			padding-left: 10%;
+			padding-right: 10%;
+		}
+
+		@include media($mobile) {
+			padding-left: 5%;
+			padding-right: 5%;
 		}
 
 		h2 {
@@ -265,7 +279,7 @@
 
 		.features-title {
 
-			@include media($tablet) {
+			@include media($onethousand) {
 				display: none;
 			}
 		}
@@ -276,7 +290,7 @@
 			h2 {
 				text-align: left;
 
-				@include media($tablet) {
+				@include media($onethousand) {
 					text-align: center;
 				}
 			}
@@ -285,8 +299,9 @@
 				@include span-columns(5);
 				padding-right: 15px;
 
-				@include media($tablet) {
-					@include span-columns(4);
+				@include media($onethousand) {
+					@include shift(0);
+					@include span-columns(12);
 					padding-right: 0;
 				}
 			}
@@ -294,8 +309,10 @@
 			.features-col-img {
 				@include span-columns(5);
 
-				@include media($tablet) {
-					@include span-columns(4);
+				@include media($onethousand) {
+					@include shift(0);
+					@include span-columns(12);
+					margin-top: 20px;
 				}
 			}
 		}
@@ -304,29 +321,16 @@
 			margin-top: 10px;
 
 			.features-col-copy {
-				margin-top: 30px;
-
-				@include media($tablet) {
-					padding: 0 10%;
-				}
+				margin-top: 50px;
 			}
 
 			.features-col-img {
-				@include span-columns(6);
 
-				@include media($tablet) {
-					@include span-columns(4);
-				}
-			}
+				@include media($onethousand) {
 
-			@include media($tablet) {
-				margin-top: 0;
-				text-align: center;
-
-				img {
-					width: 300px;
-					height: 355px;
-					margin-top: 40px;				
+					img {
+						width: 300px;			
+					}
 				}
 			}
 		}
@@ -336,20 +340,24 @@
 			.features-col-copy {
 				margin-top: 80px;
 
-				@include media($tablet) {
-					padding: 0 10%;
+				@include media($onethousand) {
 					margin-top: 30px;
 				}
 			}
 
-			@include media($tablet) {
+			.features-col-img {
 
-				img {
-					width: 200px;
-					height: 415px;
-					margin-top: 40px;
+				@include media($onethousand) {
+
+					img {
+						width: 200px;
+						height: 415px;
+						margin-top: 40px;
+					}
 				}
 			}
+
+
 		}
 
 		.feature-3 {
@@ -357,23 +365,19 @@
 			.features-col-copy {
 				margin-top: 100px;
 
-				@include media($tablet) {
-					padding: 0 10%;
+				@include media($onethousand) {
 					margin-top: 60px;
 				}
 			}
 
 			.features-col-img {
 
-				img {
-					float: right;
+				@include media($onethousand) {
 
-					@include media($tablet) {
-						@include span-columns(4);
-						width: 300px;
-						height: 450px;
+					img {
+						width: 280px;
+						height: 400px;
 						margin-top: 40px;
-						clear: right;
 					}
 				}
 			}
@@ -384,18 +388,20 @@
 			.features-col-copy {
 				margin-top: 90px;
 
-				@include media($tablet) {
-					padding: 0 10%;
+				@include media($onethousand) {
 					margin-top: 60px;
 				}
 			}
 
-			@include media($tablet) {
+			.features-col-img {
 
-				img {
-					width: 300px;
-					height: 429px;
-					margin-top: 40px;
+				@include media($onethousand) {
+
+					img {
+						width: 280px;
+						height: 400px;
+						margin-top: 40px;
+					}
 				}
 			}
 		}		
@@ -431,6 +437,10 @@
 			@include media($tablet) {
 				@include span-columns(4);
 				padding: 0 10%;
+			}
+
+			@include media($mobile) {
+				padding: 0;
 			}
 		}
 	}
@@ -492,3 +502,4 @@
 		}
 	}
 }
+

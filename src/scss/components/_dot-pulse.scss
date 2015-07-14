@@ -6,6 +6,14 @@
 	left: 4%;
 	cursor: pointer;
 
+	@include media($tablet) {
+		top: 40%;
+	}
+
+	@include media($mobile) {
+		display: none;
+	}
+
 	.inner-dot {
 		width: 10px;
 		height: 10px;
@@ -63,6 +71,14 @@
 	left: 39%;
 	cursor: pointer;
 
+	@include media($tablet) {
+		bottom: 65%;
+	}
+
+	@include media($mobile) {
+		display: none;
+	}
+
 	.inner-dot {
 		width: 10px;
 		height: 10px;
@@ -119,6 +135,10 @@
 	top: 46%;
 	right: 21%;
 	cursor: pointer;
+
+	@include media($mobile) {
+		display: none;
+	}
 
 	.inner-dot {
 		width: 10px;
