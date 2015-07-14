@@ -3,11 +3,13 @@
 	padding: 70px 0;
 
 	@include media($tablet) {
-		padding: 20px 0;
+		padding-top: 0;
+		padding-bottom: 80px;
 	}
 
 	@include media($mobile) {
-		padding: 0;
+		padding-top: 0;
+		padding-bottom: 40px;
 	}
 
 	.header-container {
@@ -322,14 +324,27 @@
 
 			.features-col-copy {
 				margin-top: 50px;
+
+				.device-icons {
+					margin-top: 15px;
+
+					img {
+						margin-right: 15px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+				}
 			}
 
 			.features-col-img {
+				margin-top: 60px;
 
 				@include media($onethousand) {
 
 					img {
-						width: 300px;			
+						width: 290px;			
 					}
 				}
 			}

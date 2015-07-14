@@ -57,7 +57,7 @@
           </br>Care for yourself and the ones you love.</h1>
           <div class="telephone">
             <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
-            <button>Download Free App</button>
+            <button onclick="sendSMS()">Download Free App</button>
           </div>
           <a href="https://itunes.apple.com/us/app/jio-health/id933157797?mt=8"><img src="assets/img/icon_app-store.png" height="44px" width="151px"></a>
         </div>
@@ -139,7 +139,7 @@
 
     <section class="features">
       <div class="features-container">
-        <h2 class="features-title">Features</h2>
+        <h2 class="features-title">Why you&#39;ll love Jio.</h2>
         <div class="features-row feature-1" id="stay-on-track">
           <div class="features-col-copy push-1">
             <h2>Stay on Track</h2>
@@ -149,7 +149,12 @@
             <h4>Beyond pounds and calories</h4>
             <p>Intuitive graphs and deep insights that help you understand the data that matters most.</p>
             <h4>Always in Sync</h4>
-            <p>Fitbit, Jawbone, and Apple HealthKit &#45; we&#39;ve got you covered.</p>
+            <p>Fitbit, Jawbone, and Apple Health &#45; we&#39;ve got you covered.</p>
+            <div class="device-icons">
+              <img src="assets/img/connect-icon-fitbit@3x.png" width="60px" height="60px">
+              <img src="assets/img/connect-icon-jawbone@3x.png" width="60px" height="60px">
+              <img src="assets/img/connect-icon-health@3x.png" width="60px" height="60px">
+            </div>
           </div>
           <div class="features-col-img">
             <img src="assets/img/blank.gif" class="lazy animated fadeInRight" data-original="assets/img/iPhone-track@2x.jpg" width="100%">
@@ -293,6 +298,20 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <script>
+      function sendSMS() {
+        var phoneNumber = document.getElementById("mobile-number").value;
+        console.log('sending sms to ' + phoneNumber);
+      $.post( 
+          'assets/php/sendSMS.php', {number: phoneNumber}
+       ).success(function(resp){
+//            json = $.parseJSON(resp);
+//            alert(json);
+            alert("Download link sent to " + phoneNumber);
+       });
+      }
     </script>
 
   </body>

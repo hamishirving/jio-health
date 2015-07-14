@@ -5173,10 +5173,12 @@ input {
   padding: 70px 0; }
   @media screen and (max-width: 768px)  {
     .header {
-      padding: 20px 0; } }
+      padding-top: 0;
+      padding-bottom: 80px; } }
   @media screen and (max-width: 480px)  {
     .header {
-      padding: 0; } }
+      padding-top: 0;
+      padding-bottom: 40px; } }
   .header .header-container {
     max-width: 73.125em;
     margin-left: auto;
@@ -5517,9 +5519,17 @@ input {
     margin-top: 10px; }
     .features .features-container .feature-1 .features-col-copy {
       margin-top: 50px; }
-    @media screen and (max-width: 1024px)  {
-      .features .features-container .feature-1 .features-col-img img {
-        width: 300px; } }
+      .features .features-container .feature-1 .features-col-copy .device-icons {
+        margin-top: 15px; }
+        .features .features-container .feature-1 .features-col-copy .device-icons img {
+          margin-right: 15px; }
+          .features .features-container .feature-1 .features-col-copy .device-icons img:last-child {
+            margin-right: 0; }
+    .features .features-container .feature-1 .features-col-img {
+      margin-top: 60px; }
+      @media screen and (max-width: 1024px)  {
+        .features .features-container .feature-1 .features-col-img img {
+          width: 290px; } }
   .features .features-container .feature-2 .features-col-copy {
     margin-top: 80px; }
     @media screen and (max-width: 1024px)  {
