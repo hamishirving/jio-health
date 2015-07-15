@@ -1,7 +1,11 @@
 // Oerrides for animate.css
 
-.animated {
-  animation-duration: 3s;
+.fadeInLeft, .fadeInLeft {
+  animation-duration: 3000ms;
+}
+
+.fadeIn {
+  animation-duration: 400ms;
 }
 
 @keyframes fadeInRight {

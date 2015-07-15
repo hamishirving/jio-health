@@ -31,7 +31,7 @@
         </div>
         <ul class="nav-links">
           <li><a href="company">Company</a></li>
-          <li><button id="get-sms">Download Free App</button></li>
+          <li><button class="get-sms">Download Free App</button></li>
         </ul>
       </div>
     </nav>
@@ -45,7 +45,7 @@
         </div>
         <ul class="nav-links">
           <li><a href="company.html">Company</a></li>
-          <li><button id="get-sms-2">Download Free App</button></li>
+          <li><button class="get-sms">Download Free App</button></li>
         </ul>
       </div>
     </nav>
@@ -186,8 +186,9 @@
         <div class="modal-bg">
           <h2>Enter mobile number</h2>
           <div class="telephone">
-            <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
-            <button>Get Download Link</button>
+            <input type="tel" class="mobile-number" id="mobile-number-2" autocomplete="off" placeholder="">
+            <div class="telephone-response"></div>
+            <button onclick="sendSMS()">Get Download Link</button>
           </div>
           <div class="close-modal"></div>
         </div>
@@ -197,15 +198,24 @@
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
 
-    <!-- Smooth Scroll -->
     <script>
-      smoothScroll.init();
-    </script>
+    function sendSMS() {
+      var phoneNumber = $("#mobile-number-2").val();
+      console.log("Number is " + phoneNumber);    
 
-    <script>
-      $("img.lazy").lazyload({
-          effect : "fadeIn"
-      });
+      if (phoneNumber == "") {
+        $('.telephone-response').html("<p>Please enter a phone number</p>");
+        console.log("Number is empty")
+      } else {
+        $('.telephone-response').html("<p>Sending...</p>");
+        $.post( 
+          'assets/php/sendSMS.php', {number: phoneNumber}
+          ).success(function(resp){
+          console.log("Download link sent to " + phoneNumber);
+        $('.telephone-response').html("<p>Download link sent to " + phoneNumber + "</p>");
+        });
+      }
+    }
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

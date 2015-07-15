@@ -58,22 +58,22 @@
 
 // SMS Modal dialog
 
-  $('#get-sms').on('click', function () {
+  $('.get-sms').on('click', function () {
     // console.log('Button clicked');
       $('.modal').addClass('fadeIn').show();
       $('.modal').removeClass('fadeOut');
     })
 
-    $('#get-sms-1').on('click', function () {
-    // console.log('Button clicked');
-      $('.telephone').hide();
-    })
+    // $('#get-sms-1').on('click', function () {
+    // // console.log('Button clicked');
+    //   $('.telephone').hide();
+    // })
 
-    $('#get-sms-2').on('click', function () {
-    // console.log('Button clicked');
-      $('.modal').addClass('fadeIn').show();
-      $('.modal').removeClass('fadeOut');
-    })
+    // $('#get-sms-2').on('click', function () {
+    // // console.log('Button clicked');
+    //   $('.modal').addClass('fadeIn').show();
+    //   $('.modal').removeClass('fadeOut');
+    // })
 
     $('.close-modal').on('click', function () {
       $('.modal').addClass('fadeOut').hide();
@@ -112,11 +112,14 @@ var ScrollToggle = function (top, callbackShow, callbackHide) {
     })();
 };
 
+// Id of the 
 var myScroller = new ScrollToggle($('#scrollToggle').position().top, function () {
     // console.log("Element has been reached.");
+    // Element to show
     $('.navbar-fixed').css('margin-top', '0');
 }, function () {
     // console.log("Element is gone.");
+    // Element to hide
     $('.navbar-fixed').css('margin-top', '-80px');
 });
 

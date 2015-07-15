@@ -4461,9 +4461,13 @@ a {
   font-size: 1em;
   font-weight: 400; }
 
-.animated {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s; }
+.fadeInLeft, .fadeInLeft {
+  -webkit-animation-duration: 3000ms;
+          animation-duration: 3000ms; }
+
+.fadeIn {
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms; }
 
 @keyframes fadeInRight {
   0% {
@@ -5222,32 +5226,28 @@ input {
           text-align: center; }
           .header .header-container .title-section:last-child {
             margin-right: 0; } }
-  .header .telephone {
-    margin-bottom: 20px; }
-    .header .telephone .intl-tel-input {
-      width: 59%;
-      margin-right: 10px;
-      margin-top: 15px;
-      vertical-align: middle; }
-      @media screen and (max-width: 610px)  {
-        .header .telephone .intl-tel-input {
-          width: 100%; } }
-      .header .telephone .intl-tel-input .mobile-number {
-        width: 100%; }
-    .header .telephone button {
-      height: 50px;
-      margin-top: 15px;
-      vertical-align: middle; }
-      @media screen and (max-width: 610px)  {
-        .header .telephone button {
-          width: 100%; } }
+  .header .telephone .intl-tel-input {
+    width: 59%;
+    margin-right: 10px;
+    margin-top: 15px;
+    vertical-align: middle; }
+    @media screen and (max-width: 610px)  {
+      .header .telephone .intl-tel-input {
+        width: 100%; } }
+    .header .telephone .intl-tel-input .mobile-number {
+      width: 100%; }
+  .header .telephone button {
+    height: 50px;
+    margin-top: 15px;
+    vertical-align: middle; }
+    @media screen and (max-width: 610px)  {
+      .header .telephone button {
+        width: 100%; } }
   .header .telephone-response {
     margin-top: 15px;
     margin-bottom: 20px; }
     .header .telephone-response p {
-      color: #5ad3c0;
-      height: 50px;
-      padding: 15px 0; }
+      color: #5ad3c0; }
   .header .header-animation {
     float: left;
     display: block;
