@@ -1,0 +1,24 @@
+.terms, .privacy {
+
+	.terms-container, .privacy-container {
+		@include outer-container;
+		padding: 5%;
+
+		p {
+			margin-bottom: 1.5em;
+		}
+
+		a {
+			text-decoration: none;
+			color: $color-primary;
+		}
+
+		h3, .important {
+			text-transform: uppercase;
+		}
+
+		h3 {
+			margin-top: 3em;
+		}
+	}
+}

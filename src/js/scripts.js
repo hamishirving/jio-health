@@ -51,13 +51,18 @@
 // SMS Modal dialog
 
   $('#get-sms').on('click', function () {
-    console.log('Button clicked');
+    // console.log('Button clicked');
       $('.modal').addClass('fadeIn').show();
       $('.modal').removeClass('fadeOut');
     })
 
+    $('#get-sms-1').on('click', function () {
+    // console.log('Button clicked');
+      $('.telephone').hide();
+    })
+
     $('#get-sms-2').on('click', function () {
-    console.log('Button clicked');
+    // console.log('Button clicked');
       $('.modal').addClass('fadeIn').show();
       $('.modal').removeClass('fadeOut');
     })

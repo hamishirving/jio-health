@@ -57,7 +57,9 @@
           </br>Care for yourself and the ones you love.</h1>
           <div class="telephone">
             <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
-            <button onclick="sendSMS()">Download Free App</button>
+            <button onclick="sendSMS()" id="get-sms-1">Download Free App</button>
+          </div>
+          <div class="telephone-response">
           </div>
           <a href="https://itunes.apple.com/us/app/jio-health/id933157797?mt=8"><img src="assets/img/icon_app-store.png" height="44px" width="151px"></a>
         </div>
@@ -214,10 +216,14 @@
         <h2>Serious about Security</h2>
         <h4>Fully encrypted and securely stored</h4>
         <div class="security-col push-2">
-          <p>We adhere to industry-leading standards to manage our network, secure our web and mobile applications, and set policies across our organization.</p>
+          <p>We adhere to industry-leading standards and best practices to manage our network, servers, web and client applications, and set security policies across our organization.</p>
+          <p>We employ SSL exclusively for all communication between client applications and servers.  Data is protected in transit and storage with industry standard cryptographic protocol using 256 bit encryption keys.</p>
+          <p>Applications are subject to strict quality testing and security review.</p>
         </div>
         <div class="security-col">
-          <p>We adhere to industry-leading standards to manage our network, secure our web and mobile applications, and set policies across our organization.</p>
+          <p>We take all necessary measures to control access to sensitive data, application data, and cryptographic keys.</p>
+          <p>Two-factor authentication and strong password controls are required for administrative access to systems.</p>
+          <p>Networks are strictly segregated according to security concerns. Modern, restrictive firewalls protect all connections between networks.</p>
         </div>
       </div>
     </section>
@@ -233,8 +239,8 @@
           <div class="footer-col push-1">
             <h4>Support</h4>
             <ul>
-              <li><a href="#">Terms &amp; Conditions</a></li></br>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="terms-conditions.html">Terms &amp; Conditions</a></li></br>
+              <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
           </div>
           <div class="footer-col push-1">
@@ -255,6 +261,7 @@
             <input type="tel" class="mobile-number" id="mobile-number" autocomplete="off" placeholder="">
             <button>Get Download Link</button>
           </div>
+          <div class="telephone-response"></div>
           <div class="close-modal"></div>
         </div>
       </div>
@@ -262,14 +269,7 @@
 
     <script src="assets/components/jquery/jquery.min.js"></script>
     <script src="assets/js/scripts.min.js"></script>
-
-    <!-- Fastclick -->
-    <script>
-    $(function() {
-        FastClick.attach(document.body);
-    });
-    </script>
-
+    
     <!-- Telephone input validation -->
     <script>
         $("#mobile-number").intlTelInput({
@@ -290,6 +290,33 @@
       });
     </script>
 
+    <!-- Fastclick -->
+    <script>
+    $(function() {
+        FastClick.attach(document.body);
+    });
+    </script>
+
+    <script>
+
+      function sendSMS() {
+        var phoneNumber = $("#mobile-number").val();
+        console.log("Number is " + phoneNumber);
+        // intlTelInput("getNumber");
+        // var phoneNumber = document.getElementById("mobile-number").value;
+        console.log('sending sms to ' + phoneNumber);
+        $('.telephone-response').html("<p>Sending...</p>");
+      $.post( 
+          'assets/php/sendSMS.php', {number: phoneNumber}
+       ).success(function(resp){
+            // json = $.parseJSON(resp);
+            // alert(json);
+            console.log("Download link sent to " + phoneNumber);
+            $('.telephone-response').html("<p>Download link sent to " + phoneNumber + "</p>");
+       });
+      }
+    </script>
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -298,20 +325,6 @@
         e.src='//www.google-analytics.com/analytics.js';
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <script>
-      function sendSMS() {
-        var phoneNumber = document.getElementById("mobile-number").value;
-        console.log('sending sms to ' + phoneNumber);
-      $.post( 
-          'assets/php/sendSMS.php', {number: phoneNumber}
-       ).success(function(resp){
-//            json = $.parseJSON(resp);
-//            alert(json);
-            alert("Download link sent to " + phoneNumber);
-       });
-      }
     </script>
 
   </body>

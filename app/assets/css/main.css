@@ -5241,6 +5241,13 @@ input {
       @media screen and (max-width: 610px)  {
         .header .telephone button {
           width: 100%; } }
+  .header .telephone-response {
+    margin-top: 15px;
+    margin-bottom: 20px; }
+    .header .telephone-response p {
+      color: #5ad3c0;
+      height: 50px;
+      padding: 15px 0; }
   .header .header-animation {
     float: left;
     display: block;
@@ -5568,7 +5575,8 @@ input {
     max-width: 73.125em;
     margin-left: auto;
     margin-right: auto;
-    padding: 100px 0; }
+    padding-top: 100px;
+    padding-bottom: 80px; }
     .security .security-container::after {
       clear: both;
       content: "";
@@ -5585,11 +5593,12 @@ input {
       width: 31.76157%;
       margin-top: 15px;
       text-align: left;
-      padding-right: 5%; }
+      padding-right: 2%; }
       .security .security-container .security-col:last-child {
         margin-right: 0; }
       .security .security-container .security-col p {
-        color: #d2d2d2; }
+        color: #d2d2d2;
+        margin-bottom: 1.5em; }
       @media screen and (max-width: 768px)  {
         .security .security-container .security-col {
           float: left;
@@ -5829,3 +5838,22 @@ input {
       padding: 100px 5%; } }
   .contact .contact-container h2 {
     margin-bottom: 30px; }
+
+.terms .terms-container, .terms .privacy-container, .privacy .terms-container, .privacy .privacy-container {
+  max-width: 73.125em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%; }
+  .terms .terms-container::after, .terms .privacy-container::after, .privacy .terms-container::after, .privacy .privacy-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .terms .terms-container p, .terms .privacy-container p, .privacy .terms-container p, .privacy .privacy-container p {
+    margin-bottom: 1.5em; }
+  .terms .terms-container a, .terms .privacy-container a, .privacy .terms-container a, .privacy .privacy-container a {
+    text-decoration: none;
+    color: #5ad3c0; }
+  .terms .terms-container h3, .terms .terms-container .important, .terms .privacy-container h3, .terms .privacy-container .important, .privacy .terms-container h3, .privacy .terms-container .important, .privacy .privacy-container h3, .privacy .privacy-container .important {
+    text-transform: uppercase; }
+  .terms .terms-container h3, .terms .privacy-container h3, .privacy .terms-container h3, .privacy .privacy-container h3 {
+    margin-top: 3em; }
